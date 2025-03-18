@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="section">
+        <img
+          id="logo"
+          src="../../images/Untitled design (4).png"
+          alt="Logo"
+          srcset=""
+        />
+      </div>
+      <div class="section">
+        <div id="login-form">
+          <h2>Welcome to [Company]</h2>
+          <form action="/login" method="post">
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" required />
+            <label for="Fname">First Name</label>
+            <input type="text" id="Fname" name="Fname" required />
+            <label for="Lname">Last Name</label>
+            <input type="text" id="Lname" name="Lname" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Log In</button>
+            <p>Or Continue With</p>
+            <div class="social-media">
+              <img
+                src="https://img.icons8.com/color/48/000000/google-logo.png"
+                alt="Google"
+              />
+              <img
+                src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                alt="Facebook"
+              />
+              <img
+                src="https://img.icons8.com/color/48/000000/instagram-new.png"
+                alt="Twitter"
+              />
+            </div>
+          </form>
+          <p>
+            Already have an account?
+            <a href="/Ecommerce/src/main/resources/screens/login/index.html"
+              >Log In</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
