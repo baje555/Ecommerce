@@ -17,7 +17,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto createProduct(ProductDto productDto) {
-        // Correctly map the ProductDto to Product
+
         Product product = ProductMapper.mapToProduct(productDto);
         Product savedProduct = productRepository.save(product);
         return ProductMapper.mapToProductDto(savedProduct);
@@ -43,8 +43,8 @@ public class ProductServiceImpl implements ProductService {
 
         // Update the product fields
         product.setName(updatedProduct.getName());
-        product.setImage(updatedProduct.getImage());
         product.setDescription(updatedProduct.getDescription());
+        product.setCategory(updatedProduct.getCategory());
 
         // Save the updated product
         Product updatedProductObj = productRepository.save(product);

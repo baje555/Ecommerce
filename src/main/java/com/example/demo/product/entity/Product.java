@@ -19,9 +19,8 @@ public class Product {
 
     @Column(name = "prod_name",nullable = false)
     private String name;
-    @Lob
-    @Column(name = "image",nullable = false)
-    private byte[] image;
+    @Column(name = "category")
+private String category;
     @Column(name = "description",nullable = true)
     private String description;
     @Column(name = "price",nullable = false)

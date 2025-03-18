@@ -9,30 +9,21 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
+//@CrossOrigin(origins = "http://localhost:63342")
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/")
 public class ProductController {
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
-    private final ProductService productService;
+    private ProductService productService;
 
-    @PostMapping
+    @PostMapping("/products")
     public ResponseEntity<ProductDto> createProduct(@RequestBody ProductDto productDto) {
+        logger.info("Received request to create product: {}", productDto);
         ProductDto saveProduct = productService.createProduct(productDto);
         return new ResponseEntity<>(saveProduct, HttpStatus.CREATED);
     }
 
-    // This method retrieves all products
-    @GetMapping
-    public ResponseEntity<List<ProductDto>> getAllProducts() {
-        logger.info("Received request to get all products");
-        List<ProductDto> products = productService.getAllProducts();
-        return ResponseEntity.ok(products);
-    }
-
-    // This method retrieves a product by its ID
     @GetMapping("/{id}")
     public ResponseEntity<ProductDto> getProduct(@PathVariable("id") Long productId) {
         logger.info("Received request to get product with ID: {}", productId);
