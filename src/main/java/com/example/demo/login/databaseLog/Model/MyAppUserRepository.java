@@ -1,4 +1,4 @@
-package com.example.demo.login.Model;
+package com.example.demo.login.databaseLog.Model;
 
 import java.util.Optional;
 
@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MyAppUserRepository extends JpaRepository<MyAppUser, Long>{
     
-    Optional<MyAppUser> findByUsername(String username);
+    Optional<MyAppUser> findByEmail(String email);
     
 }

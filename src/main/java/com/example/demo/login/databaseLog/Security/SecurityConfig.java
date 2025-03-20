@@ -1,7 +1,6 @@
-package com.example.demo.login.Security;
+package com.example.demo.login.databaseLog.Security;
 
-import com.example.demo.login.Model.MyAppUserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.demo.login.databaseLog.Model.MyAppUserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -13,10 +12,11 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.SecurityFilterChain;
+
 
 
 import lombok.AllArgsConstructor;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @AllArgsConstructor
@@ -57,7 +57,7 @@ public class SecurityConfig {
     
             
             .authorizeHttpRequests(registry ->{
-                registry.requestMatchers("/req/signup", "/css/**", "/js/**", "/images/**", "/static/**").permitAll();
+                registry.requestMatchers("/req/signup", "/css/**", "/js/**", "/images/**", "/static/**","/index").permitAll();
 registry.requestMatchers(HttpMethod.POST, "/req/signup").permitAll();
 registry.requestMatchers(HttpMethod.POST,"/api/product").permitAll();
                 registry.anyRequest().authenticated();

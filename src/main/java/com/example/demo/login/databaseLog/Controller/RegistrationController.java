@@ -1,7 +1,7 @@
-package com.example.demo.login.Controller;
+package com.example.demo.login.databaseLog.Controller;
 
-import com.example.demo.login.Model.MyAppUser;
-import com.example.demo.login.Model.MyAppUserRepository;
+import com.example.demo.login.databaseLog.Model.MyAppUser;
+import com.example.demo.login.databaseLog.Model.MyAppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
