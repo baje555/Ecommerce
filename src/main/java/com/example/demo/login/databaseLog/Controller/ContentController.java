@@ -1,4 +1,4 @@
-package com.example.demo.login.Controller;
+package com.example.demo.login.databaseLog.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
